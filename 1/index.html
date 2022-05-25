@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>React Hooks: Введение</title>
+   <link rel="stylesheet" href="//htmlacademy.github.io/console.js/latest/css/style.css">
+   <link rel="stylesheet" href="style.css">
+  
+  <style>
+
+    #root {
+      padding: 10px;
+    }
+
+    .custom-button {
+      background-color: #4caf50;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    .button-danger {
+      background-color: #f44336;
+    }
+
+    .block {
+      margin: 10px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script src="https://htmlacademy.github.io/console.js/latest/js/index-silent.js"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
+
+Механизм хуков был создан не только для расширения возможностей функциональных компонентов. Хуки дополнительно решают задачи переиспользования кода. Повысить переиспользования кода в React решали несколькими способами. В самых первых версиях библиотека рекомендовала применять механизм mixins (миксины), но их довольно быстро признали неудачным решением и отказались от поддержки. Наиболее удачным решенем стали HOC (компоненты высшего порядка). Они позволяют переиспользовать код, за счёт расширения возможностей компонентов. Один компонент можно обернуть в несколько HOC и тем самым вобрать в себя их возможности. Но HOC — это как правило про class-component, да и у них есть неприятные ограничения, главное из которых — раздувание дерева компонентов.
+
+Механизм хуков предоставляет возможность взглянуть на проблему переиспользования немного по-другому. Давайте разберёмся с этим на практкие. За основу возьмём пример, который рассматривали в одной из предыдущих демонстраций.
